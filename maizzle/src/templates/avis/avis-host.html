@@ -1,0 +1,17 @@
+---
+title: "Avis host"
+---
+<x-main>
+    <h1>Un nouveau commentaire a été publié</h1>
+    <p>Bonjour @{{{ $avis->logement->user->name }}},</p>
+    <p>Un client a publié un nouveau commentaire sur votre logement <strong>@{{{ $avis->logement->title }}}</strong>.</p>
+    
+    <h2>Détails du commentaire :</h2>
+    <ul>
+        <li>Client : <strong>@{{{ $avis->user->name }}}</strong></li>
+        <li>Note : <strong>@{{{ $avis->rating }}}</strong>/5</li>
+        <li>Commentaire : <strong>@{{{ $avis->comment }}}</strong></li>
+    </ul>
+
+    <p>Vous pouvez consulter tous les commentaires dans la section dédiée de votre compte.</p>
+</x-main>

@@ -1,0 +1,32 @@
+
+> dev
+> vite
+
+
+  VITE v5.2.12  ready in 320 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+
+  LARAVEL v10.48.12  plugin v1.0.4
+
+  ➜  APP_URL: https://dev.atypikhouse.site/
+12:57:04 PM [vite] hmr update /resources/scss/style.scss?direct
+12:57:06 PM [vite] page reload storage/framework/views/83bc52eb0530205f81a1a4bdfebced47.php
+12:57:19 PM [vite] page reload resources/views/category/index.blade.php
+12:57:19 PM [vite] page reload resources/views/category/index.blade.php
+12:57:31 PM [vite] page reload resources/views/category/index.blade.php
+12:57:31 PM [vite] page reload resources/views/category/index.blade.php
+12:57:33 PM [vite] page reload storage/framework/views/83bc52eb0530205f81a1a4bdfebced47.php
+
+> dev
+> vite
+
+Port 5173 is in use, trying another one...
+
+  VITE v5.2.12  ready in 342 ms
+
+  ➜  Local:   http://127.0.0.1:5174/
+
+  LARAVEL v10.48.12  plugin v1.0.4
+
+  ➜  APP_URL: https://dev.atypikhouse.site/

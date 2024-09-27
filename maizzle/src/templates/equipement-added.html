@@ -1,0 +1,17 @@
+---
+title: "Equipement ajouté"
+---
+<x-main>
+    <div class="container">
+        <div class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold text-gray-800">Bonjour,</h1>
+            <p class="mt-4 text-lg">Un nouvel équipement a été ajouté à une catégorie :</p>
+            <div class="mt-4 p-4 bg-gray-100 rounded border border-gray-300">
+                <h2 class="text-2xl font-semibold">@{{{ $equipement->name }}}</h2>
+                <p class="mt-2">Catégorie : @{{{ $category->name }}}</p>
+            </div>
+            <p class="mt-4">Vous pouvez le consulter dans le tableau de bord.</p>
+            <p class="mt-4">Merci, <br> L'équipe de réservation</p>
+        </div>
+    </div>
+</x-main>

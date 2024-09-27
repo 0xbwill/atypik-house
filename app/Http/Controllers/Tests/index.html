@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Tests Unitaires</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #ecf0f1;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        ul li:hover {
+            background-color: #dfe6e9;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .btn {
+            padding: 8px 12px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Liste des Tests Unitaires</h1>
+        <ul id="test-list">
+            <!-- Liste des tests sera injectée ici -->
+        </ul>
+    </div>
+
+    <script>
+        // Liste de tests unitaires se basant sur les fonctions de tests crées dans le ctrller Tests
+        const tests = [
+            { name: "Publier un avis", url: "/api/tests/AvisTest" },
+            { name: "Annuler une reservation", url: "/api/tests/annulationReservationTest" },
+        ];
+
+        // Sélectionne l'élément UL dans le DOM
+        const testList = document.getElementById('test-list');
+
+        // Injecte les éléments de la liste de tests dans l'HTML
+        tests.forEach(test => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<span>${test.name}</span><a class="btn" href="${test.url}">Lancer</a>`;
+            testList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

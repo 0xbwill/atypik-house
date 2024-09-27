@@ -1,0 +1,233 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    color-scheme: light !important;
+}
+
+main {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav {
+    a:not(.no-hover-underline) {
+        border-bottom-width: 0;
+        background-image: linear-gradient(transparent, transparent),
+            linear-gradient(#222222, #222222);
+        background-size: 0 2px;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.3s ease-in-out;
+
+        &:hover {
+            background-size: 100% 2px;
+            background-position: 0 100%;
+        }
+    }
+
+    .menu-deroulant a:not(.no-hover-underline),
+    .search-container a:not(.no-hover-underline),
+    a.logo:not(.no-hover-underline) {
+        border-bottom-width: inherit;
+        background-image: none;
+        transition: none;
+
+        &:hover {
+            background-size: initial;
+            background-position: initial;
+        }
+    }
+}
+
+// TomSelect
+#equipements .ts-wrapper .ts-control {
+    padding: 12px !important;
+}
+
+// Slick Global Styles
+.slick-prev,
+.slick-next {
+    @media screen and (max-width: 900px) {
+        display: none !important;
+    }
+
+    top: 50% !important;
+    background: none !important;
+    border: none !important;
+    font-size: 24px !important;
+    color: #333 !important;
+}
+
+.slick-next {
+    right: -2.5rem !important;
+}
+
+.slick-prev {
+    left: -2.5rem !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #000 !important;
+    content: "" !important;
+}
+
+.slick-dots {
+    bottom: -4rem !important;
+}
+
+#avis-slider {
+    .slick-slide {
+        margin: 0 18px;
+    }
+
+    /* the parent */
+    .slick-list {
+        &.draggable {
+            width: 100% !important;
+        }
+    }
+}
+
+.annexes-slider {
+    .slider-item {
+        width: 100%;
+        /* Utilisé par Slick pour la largeur */
+        padding: 10px;
+        /* Ajoute un espacement entre les images */
+    }
+
+    .slick-slide img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 9 / 12;
+        /* Définit un ratio 9:16 */
+        object-fit: cover;
+        /* Recadre l'image pour couvrir l'espace */
+        border-radius: 8px;
+    }
+
+    .slick-slide {
+        margin: 0 27px;
+    }
+
+    /* the parent */
+    .slick-list {
+        margin: 0 -27px;
+    }
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    color: #000 !important;
+}
+
+.fa-star:before {
+    margin-left: 2px;
+}
+
+// Algolia Search
+.ais-SearchBox {
+    margin-bottom: 1em;
+}
+
+.ais-InstantSearch {
+    max-width: 960px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.ais-Hits-item {
+    margin-left: 0;
+    width: 100%;
+}
+
+.ais-Hits-item img {
+    margin-right: 1em;
+}
+
+.ais-Hits-list {
+    margin-bottom: 1em;
+}
+
+// easter
+@keyframes moveAndRotate {
+    0% {
+        bottom: 0;
+        right: 0;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        bottom: 100%;
+        right: 100%;
+        transform: rotate(720deg);
+    }
+}
+
+footer a {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        background-size: 0 !important;
+        background-position: initial !important;
+        background-color: transparent !important;
+    }
+}
+
+.best-logements,
+.logementsAll,
+.logementsSimilaires {
+    h3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        max-height: calc(2 * 1.5em);
+        width: 70%;
+    }
+
+    .slick-slide p:first-of-type {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+
+        line-height: 1.5em;
+        min-height: calc(3 * 1.5em);
+    }
+
+    p:first-of-type {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+
+        line-height: 1.5em;
+        min-height: calc(3 * 1.5em);
+    }
+
+    p:nth-of-type(2) {
+        margin-top: 0.25em;
+    }
+
+    .slick-slide p:nth-of-type(2) {
+        margin-top: 0.25em;
+    }
+}

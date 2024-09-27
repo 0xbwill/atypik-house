@@ -1,0 +1,22 @@
+---
+title: "Reservation Cancellation - Client"
+---
+<x-main>
+    <h1>Annulation de votre réservation</h1>
+    <p>Bonjour @{{{ $reservation->user->name }}},</p>
+    <p>Nous vous confirmons que votre réservation pour le logement <strong>@{{{ $reservation->logement->title
+            }}}</strong> a bien été annulée.</p>
+
+    <h2>Détails de l'annulation :</h2>
+    <ul>
+        <li>Logement : <strong>@{{{ $reservation->logement->title }}}</strong></li>
+        <li>Date de début : <strong>@{{{ \Carbon\Carbon::parse($reservation->debut_resa)->format('d/m/Y') }}}</strong>
+        </li>
+        <li>Date de fin : <strong>@{{{ \Carbon\Carbon::parse($reservation->fin_resa)->format('d/m/Y') }}}</strong></li>
+        <li>Montant total : <strong>@{{{ number_format($totalPrice, 2) }}} €</strong></li>
+    </ul>
+
+    <p>Vous recevrez un remboursement de <strong> @{{{ number_format($totalPrice, 2) }}} €</strong> sous 7 jours ouvrés.</p>
+
+    <p>Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter.</p>
+</x-main>

@@ -1,0 +1,27 @@
+---
+title: "New payment host"
+---
+<x-main>
+    <div class="max-w-2xl mx-auto my-8 bg-white p-6 shadow-md rounded-lg">
+        <h1 class="text-2xl font-bold text-center text-blue-600">Confirmation de paiement pour votre logement</h1>
+        <p class="mt-4 text-lg text-gray-700">Bonjour @{{{ $reservation->logement->user->name }}},</p>
+        <p class="mt-2 text-gray-600">Le client <strong>@{{{ $reservation->user->name }}}</strong> a effectué le
+            paiement pour la réservation de votre logement <strong>@{{{ $reservation->logement->title }}}</strong>.</p>
+
+        <h2 class="mt-4 text-lg font-semibold text-gray-800">Détails de la réservation :</h2>
+        <ul class="mt-2 list-disc list-inside text-gray-600">
+            <li>Date de début : <strong>@{{{ \Carbon\Carbon::parse($reservation->debut_resa)->format('d/m/Y')
+                    }}}</strong></li>
+            <li>Date de fin : <strong>@{{{ \Carbon\Carbon::parse($reservation->fin_resa)->format('d/m/Y') }}}</strong>
+            </li>
+            <li>Montant total : <strong>@{{{ number_format($totalPrice, 2) }}} €</strong></li>
+            <li>Nom du client : <strong>@{{{ $reservation->user->name }}}</strong></li>
+            <li>Email du client : <strong>@{{{ $reservation->user->email }}}</strong></li>
+        </ul>
+
+        <p class="mt-4 text-gray-600">Merci de préparer votre logement pour l'accueil de votre invité.</p>
+
+        <p class="mt-4 text-gray-600">Cordialement,</p>
+        <p class="text-gray-800 font-semibold">L'équipe Atypik House</p>
+    </div>
+</x-main>

@@ -1,0 +1,66 @@
+---
+title: "New contact message"
+---
+<x-main>
+    <div class="bg-slate-100 sm:px-4 font-sans">
+      <table align="center">
+        <tr>
+          <td class="w-[552px] max-w-full">
+            <div class="my-12 sm:my-8 text-center">
+              <a href="#" aria-label="link">
+                <img src="@{{{ url('/images/logo full.png') }}}" width="70" alt="Atypik House">
+              </a>
+            </div>
+
+            <table class="w-full">
+              <tr>
+                <td class="p-12 sm:px-6 text-base text-slate-700 bg-white rounded shadow-sm">
+                  <h1 class="m-0 mb-6 text-2xl sm:leading-8 text-black font-semibold">
+                    Nouveau message de contact
+                  </h1>
+
+                  <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                      <div class="w-1/2">
+                        <label for="nom" class="block text-sm font-medium text-gray-700">Nom</label>
+                        <div class="mt-1">
+                          <p id="nom" class="mt-0 py-2 pl-0 border border-gray-300 rounded-md shadow-sm bg-gray-50">@{{{ $nom }}}</p>
+                        </div>
+                      </div>
+                      <div class="w-1/2 ml-4">
+                        <label for="prenom" class="block text-sm font-medium text-gray-700">Prénom</label>
+                        <div class="mt-1">
+                          <p id="prenom" class="mt-0 py-2 pl-0 border border-gray-300 rounded-md shadow-sm bg-gray-50">@{{{ $prenom }}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <label for="telephone" class="block text-sm font-medium text-gray-700">Téléphone</label>
+                      <div class="mt-1">
+                        <p id="telephone" class="mt-0 py-2 pl-0 border border-gray-300 rounded-md shadow-sm bg-gray-50">@{{{ $telephone }}}</p>
+                      </div>
+                    </div>
+                    <div>
+                      <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                      <div class="mt-1">
+                        <p id="email" class="mt-0 py-2 pl-0 border border-gray-300 rounded-md shadow-sm bg-gray-50">@{{{ $email }}}</p>
+                      </div>
+                    </div>
+                    <div>
+                      <label for="formMessage" class="block text-sm font-medium text-gray-700">Message</label>
+                      <div class="mt-1">
+                        <p id="formMessage" class="mt-0 py-2 pl-0 border border-gray-300 rounded-md shadow-sm bg-gray-50">@{{{ $formMessage }}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="separator">
+                <td class="leading-12">&zwj;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </x-main>

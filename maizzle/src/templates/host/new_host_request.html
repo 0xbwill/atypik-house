@@ -1,0 +1,36 @@
+---
+title: "New host request"
+---
+<x-main>
+    <div class="bg-slate-100 sm:px-4 font-sans">
+        <table class="w-full">
+            <tr>
+                <td>
+                    <h1 class="m-0 mb-6 text-2xl sm:leading-8 text-black font-semibold">
+                        Nouvelle demande pour devenir hôte
+                    </h1>
+                    <p class="text-black">
+                        Bonjour Admin,
+                    </p>
+                    <p class="text-black">
+                        Une nouvelle demande pour devenir hôte a été soumise avec les informations suivantes :
+                    </p>
+                    <p class="text-black">
+                        <strong>Nom :</strong> @{{{ $data['name'] }}}<br>
+                        <strong>Email :</strong> @{{{ $data['email'] }}}<br>
+                        <strong>Message :</strong> @{{{ $data['message'] }}}
+                    </p>
+                    <p class="text-black">
+                        Veuillez vous connecter à votre tableau de bord pour examiner et traiter cette demande.
+                    </p>
+                    <p class="text-black">
+                        Cordialement,
+                    </p>
+                    <p class="text-black">
+                        L'équipe AtypikHouse
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</x-main>

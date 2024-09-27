@@ -1,0 +1,17 @@
+---
+title: "Avis client"
+---
+<x-main>
+    <h1>Merci pour votre commentaire !</h1>
+    <p>Bonjour @{{{ $avis->user->name }}},</p>
+    <p>Nous vous remercions d'avoir partagé votre avis sur le logement <strong>@{{{ $avis->logement->title }}}</strong>.</p>
+    
+    <h2>Détails de votre commentaire :</h2>
+    <ul>
+        <li>Logement : <strong>@{{{ $avis->logement->title }}}</strong></li>
+        <li>Note : <strong>@{{{ $avis->rating }}}</strong>/5</li>
+        <li>Commentaire : <strong>@{{{ $avis->comment }}}</strong></li>
+    </ul>
+
+    <p>Nous espérons vous revoir bientôt !</p>
+</x-main>

@@ -1,0 +1,31 @@
+---
+title: "Client rejection"
+---
+<x-main>
+    <div class="bg-slate-100 sm:px-4 font-sans">
+        <table class="w-full">
+            <tr>
+                <td>
+                    <h1 class="m-0 mb-6 text-2xl sm:leading-8 text-black font-semibold">
+                        Votre demande pour devenir hôte a été rejetée.
+                    </h1>
+                    <p class="text-black">
+                        Bonjour @{{{ $data['name'] }}},
+                    </p>
+                    <p class="text-black">
+                        Nous sommes désolés de vous informer que votre demande pour devenir hôte a été refusée.
+                    </p>
+                    <p class="text-black">
+                        Si vous avez des questions, n'hésitez pas à nous contacter.
+                    </p>
+                    <p class="text-black">
+                        Cordialement,
+                    </p>
+                    <p class="text-black">
+                        L'équipe AtypikHouse
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</x-main>

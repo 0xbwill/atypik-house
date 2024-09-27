@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /admin-old/
+Disallow: /search/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*?sort=
+Disallow: /*?filter=
+Allow: /public/
+Sitemap: https://f2i-devo22a-wd-nv-pd-bb.atypikhouse.site/sitemap.xml
