@@ -95,3 +95,7 @@ To run this project locally, ensure you have the following prerequisites:
     ```
 
 You can now access the application at [http://localhost:8000](http://localhost:8000).
+
+## Contributors
+
+Handcrafted with ❤️ by [@NicoVnd](https://github.com/NicoVnd), [@benjamin60021](https://github.com/benjamin60021), and myself.
