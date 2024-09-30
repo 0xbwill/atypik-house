@@ -18,9 +18,9 @@ AtypikHouse is a platform for renting unique accommodations (tree houses, yurts,
   - Secure online payments via APIs like PayPal and Stripe (Sandbox mode for testing).
   - Cancel bookings if the date has not passed yet.
 - 💬 **Reviews & Comments**:
-  - Tenants can leave comments and reviews about their stay (during or after their booking).
+  - Tenants can leave comments and reviews about their stay (after their booking).
 - 📲 **Mobile Application**:
-  - Developed as a **Progressive Web App (PWA)**, accessible from any mobile browser with a native-like experience (offline mode, push notifications).
+  - Developed as a **Progressive Web App (PWA)**, accessible from any mobile browser with a native-like experience.
 
 ## 🛠️ Technologies Used
 
@@ -57,8 +57,8 @@ To run this project locally, ensure you have the following prerequisites:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/atypikhouse.git
-    cd atypikhouse
+    git clone https://github.com/0xbwill/atypik-house.git
+    cd atypik-house
     ```
 
 2. Install PHP and JavaScript dependencies:
