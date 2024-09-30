@@ -1,66 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏡 AtypikHouse
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+AtypikHouse is a platform for renting unique accommodations (tree houses, yurts, floating cabins, etc.) in France and Europe. This project was developed to meet the needs of **AtypikHouse** by using modern web technologies to provide a smooth, secure, and high-performance user experience.
 
-## About Laravel
+## 🌟 Main Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- 🔍 **Browse Properties**: View different types of available accommodations with detailed information (property type, capacity, price, amenities, photos, etc.).
+- 📝 **User Account Management**:
+  - User registration and login (for both owners and tenants).
+  - Profile management (update personal information, manage properties, etc.).
+  - View booking history.
+- 🏠 **Property Management**:
+  - Add, edit, and delete properties for owners.
+  - Plan availability and manage property bookings.
+  - Manage available amenities.
+- 📅 **Booking System**:
+  - Book available accommodations.
+  - Secure online payments via APIs like PayPal and Stripe (Sandbox mode for testing).
+  - Cancel bookings if the date has not passed yet.
+- 💬 **Reviews & Comments**:
+  - Tenants can leave comments and reviews about their stay (during or after their booking).
+- 📲 **Mobile Application**:
+  - Developed as a **Progressive Web App (PWA)**, accessible from any mobile browser with a native-like experience (offline mode, push notifications).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Technologies Used
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Front-end
+- **Tailwind CSS** and **SCSS** for styling and creating responsive and modern interfaces.
+- **DaisyUI** for pre-styled components built on top of Tailwind CSS to accelerate development.
+- **Vite** for fast bundling and development.
 
-## Learning Laravel
+### Back-end
+- **Laravel**: PHP framework for managing business logic and implementing a clean MVC architecture.
+- **Livewire**: Adding dynamic and reactive features without the need for a heavy JavaScript framework.
+- **SQLite**: Lightweight database management for handling user data, properties, and bookings.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Mobile Application
+- **Progressive Web App (PWA)**: Developed using Laravel as the backend framework, the PWA offers a complete mobile experience while remaining accessible through a web browser.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Tools & Deployment
+- **Git** and **GitLab**: Source code management and CI/CD.
+- **Composer**: PHP dependency manager.
+- **Pest**: Testing framework for Laravel (unit, integration, and functional tests).
+- **Linux**: Secure and reliable server for hosting and deployment.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Installation and Configuration
 
-## Laravel Sponsors
+To run this project locally, ensure you have the following prerequisites:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. **PHP 8.1+**
+2. **Composer**
+3. **Node.js & npm**
+4. **SQLite**
 
-### Premium Partners
+### Installation Steps
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. Clone the repository:
 
-## Contributing
+    ```bash
+    git clone https://github.com/your-username/atypikhouse.git
+    cd atypikhouse
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. Install PHP and JavaScript dependencies:
 
-## Code of Conduct
+    ```bash
+    composer install
+    npm install
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. Copy the `.env.example` file to `.env` and configure your environment (database, API keys, etc.):
 
-## Security Vulnerabilities
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+4. Create and configure the SQLite database:
 
-## License
+    ```bash
+    touch database/database.sqlite
+    php artisan migrate --seed
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5. Compile the assets with Vite:
+
+    ```bash
+    npm run dev
+    ```
+
+6. Start the development server:
+
+    ```bash
+    php artisan serve
+    ```
+
+You can now access the application at [http://localhost:8000](http://localhost:8000).
